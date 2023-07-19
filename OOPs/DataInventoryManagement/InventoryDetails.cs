@@ -8,9 +8,9 @@ namespace OOPs.DataInventoryManagement
 {
     internal class InventoryDetails
     {
-        public string name {  get; set; }
-        public string weight { get; set; }
-        public int pricePerKg { get; set; }
+        public string Name {  get; set; }
+        public int Weight { get; set; }
+        public int PricePerKg { get; set; }
 
     }
 }

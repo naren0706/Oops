@@ -16,7 +16,7 @@ namespace OOPs.DataInventoryManagement
             List<InventoryDetails> list = JsonConvert.DeserializeObject<List<InventoryDetails>>(json);
             foreach (var data in list)
             {
-                Console.WriteLine(data.name+" "+data.weight+" "+data.pricePerKg);
+                Console.WriteLine(data.Name+" "+data.Weight+" "+data.PricePerKg);
             }
         }
     }
