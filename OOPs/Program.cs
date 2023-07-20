@@ -22,11 +22,11 @@ namespace OOPs
                         break;
                     case 2:
                         bool flag2 = true;
+                        InventoryManagementOperation inventoryManagementOperation = new InventoryManagementOperation();
                         while (flag2)
                         {
-                            Console.WriteLine("1.Display files\n2.add values");
+                            Console.WriteLine("1.read files\n2.add values\n3.delete Value\n4.update to json");
                             int choice2 = Convert.ToInt32(Console.ReadLine());
-                            InventoryManagementOperation inventoryManagementOperation = new InventoryManagementOperation();
 
                             switch (choice2)
                             {
@@ -34,10 +34,18 @@ namespace OOPs
                                     inventoryManagementOperation.ReadInventoryJson(filePath2);
                                     break;
                                 case 2:
-                                    inventoryManagementOperation.ReadInventoryJson(filePath2);
                                     Console.WriteLine("Enter the crop name ");
                                     string cropName = Console.ReadLine();
                                     inventoryManagementOperation.AddInventoryManagement(cropName);
+                                    break;
+                                case 3:
+                                    Console.WriteLine("Enter the crop name ");
+                                    cropName = Console.ReadLine();
+                                    Console.WriteLine("Enter the crop name ");
+                                    string inventoryName = Console.ReadLine();
+                                    inventoryManagementOperation.DeleteValue(cropName,inventoryName);
+                                    break;
+                                case 4:
                                     inventoryManagementOperation.AddToJsonFile(filePath2);
                                     break;
                                 default:
