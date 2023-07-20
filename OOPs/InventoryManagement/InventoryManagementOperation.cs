@@ -41,7 +41,7 @@ namespace OOPs.InventoryManagement
                     list.RiceList.Remove(details);
                 }
             }
-            if (objectName.ToLower().Equals("wheat"))
+            if(objectName.ToLower().Equals("wheat"))
             {
                 foreach (var data in list.WheatList)
                 {
