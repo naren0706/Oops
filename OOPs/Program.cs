@@ -27,7 +27,7 @@ namespace OOPs
                         InventoryManagementOperation inventoryManagementOperation = new InventoryManagementOperation();
                         while (flag2)
                         {
-                            Console.WriteLine("1.read files\n2.add values\n3.delete Value\n4.update to json");
+                            Console.WriteLine("1.read files\n2.add values\n3.delete Value\n4.edit value \n5.update to json");
                             int choice2 = Convert.ToInt32(Console.ReadLine());
 
                             switch (choice2)
@@ -48,6 +48,13 @@ namespace OOPs
                                     inventoryManagementOperation.DeleteValue(cropName,inventoryName);
                                     break;
                                 case 4:
+                                    Console.WriteLine("Enter the crop name ");
+                                    cropName = Console.ReadLine();
+                                    Console.WriteLine("Enter the crop name ");
+                                    inventoryName = Console.ReadLine();
+                                    inventoryManagementOperation.EditValue(cropName,inventoryName);
+                                    break;
+                                case 5:
                                     inventoryManagementOperation.AddToJsonFile(filePath2);
                                     break;
                                 default:
