@@ -25,99 +25,8 @@ namespace OOPs.InventoryManagement
             Console.WriteLine("PulsesList");
             DisplayList(list.Pulseslist);
         }
-        public void EditValue(string objectName, string inventoryName)
-        {
-            InventoryDetails details = new InventoryDetails();
-            if (objectName.ToLower().Equals("rice"))
-            {
-                foreach (var data in list.RiceList)
-                {
-                    if (data.Name.Equals(inventoryName))
-                        details = data;
-                }
-                if (details != null)
-                {
-                    Console.WriteLine("what do you want to edit 1.Name 2.Weight 3.Price Per Kg");
-                    int choice = Convert.ToInt32(Console.ReadLine());
-                    switch (choice)
-                    {
-                        case 1:
-                            Console.WriteLine("Enter Name");
-                            details.Name = Console.ReadLine();
-                            break;
-                        case 2:
-                            Console.WriteLine("Enter Weight");
-                            details.Weight = Convert.ToInt32(Console.ReadLine());
-                            break;
-                        case 3:
-                            Console.WriteLine("Enter Price per kg");
-                            details.PricePerKg = Convert.ToInt32(Console.ReadLine());
-                            break;
-                    }
 
-                }
-            }
-            if (objectName.ToLower().Equals("wheat"))
-            {
-                foreach (var data in list.WheatList)
-                {
-                    if (data.Name.Equals(inventoryName))
-                        details = data;
-                }
-                if (details != null)
-                {
-                    Console.WriteLine("what do you want to edit 1.Name 2.Weight 3.Price Per Kg");
-                    int choice = Convert.ToInt32(Console.ReadLine());
-                    switch (choice)
-                    {
-                        case 1:
-                            Console.WriteLine("Enter Name");
-                            details.Name = Console.ReadLine();
-                            break;
-                        case 2:
-                            Console.WriteLine("Enter Weight");
-                            details.Weight = Convert.ToInt32(Console.ReadLine());
-                            break;
-                        case 3:
-                            Console.WriteLine("Enter Price per kg");
-                            details.PricePerKg = Convert.ToInt32(Console.ReadLine());
-                            break;
-                    }
-
-                }
-            }
-            if (objectName.ToLower().Equals("pulses"))
-            {
-                foreach (var data in list.Pulseslist)
-                {
-                    if (data.Name.Equals(inventoryName))
-                        details = data;
-                }
-                if (details != null)
-                {
-                    Console.WriteLine("what do you want to edit 1.Name 2.Weight 3.Price Per Kg");
-                    int choice = Convert.ToInt32(Console.ReadLine());
-                    switch (choice)
-                    {
-                        case 1:
-                            Console.WriteLine("Enter Name");
-                            details.Name = Console.ReadLine();
-                            break;
-                        case 2:
-                            Console.WriteLine("Enter Weight");
-                            details.Weight = Convert.ToInt32(Console.ReadLine());
-                            break;
-                        case 3:
-                            Console.WriteLine("Enter Price per kg");
-                            details.PricePerKg = Convert.ToInt32(Console.ReadLine());
-                            break;
-                    }
-
-                }
-            }
-        }
-
-            public void DeleteValue(string objectName ,string inventoryName)
+        public void DeleteValue(string objectName ,string inventoryName)
         {
             InventoryDetails details = new InventoryDetails();
             if (objectName.ToLower().Equals("rice"))
@@ -132,7 +41,7 @@ namespace OOPs.InventoryManagement
                     list.RiceList.Remove(details);
                 }
             }
-            if (objectName.ToLower().Equals("wheat"))
+            if(objectName.ToLower().Equals("wheat"))
             {
                 foreach (var data in list.WheatList)
                 {
