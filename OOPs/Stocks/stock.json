@@ -1,0 +1,17 @@
+[
+  {
+    "StockName": "Amazon",
+    "NoOfStock": 100,
+    "SharePrice": 40
+  },
+  {
+    "StockName": "FlipKart",
+    "NoOfStock": 80,
+    "SharePrice": 60
+  },
+  {
+    "StockName": "Ajio",
+    "NoOfStock": 100,
+    "SharePrice": 20
+  }
+]

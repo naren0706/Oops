@@ -1,5 +1,6 @@
 ﻿using OOPs.DataInventoryManagement;
 using OOPs.InventoryManagement;
+using OOPs.Stocks;
 using System;
 
 namespace OOPs
@@ -8,12 +9,13 @@ namespace OOPs
     {
         static string filePath1 = @"E:\BridgeGateProblems\Oops\OOPs\DataInventoryManagement\InventoryData.json";
         static string filePath2 = @"E:\BridgeGateProblems\Oops\OOPs\InventoryManagement\InventoryManagementData.json";
+        static string stockFilePath = @"E:\BridgeGateProblems\Oops\OOPs\Stocks\stock.json";
         public static void Main(String[] args)
         {
             bool flag = true;
             while (flag)
             {
-                Console.WriteLine("1.show inventory files\n2.inventory management operation");
+                Console.WriteLine("1.show inventory files\n2.inventory management operation\n3.Stocks");
                 int choice = Convert.ToInt32(Console.ReadLine());
                 switch (choice) {
                     case 1:
@@ -54,6 +56,10 @@ namespace OOPs
 
                             }
                         }
+                        break;
+                    case 3:
+                        StockOperation stockOperation = new StockOperation();
+                        stockOperation.ReadInventoryJson(stockFilePath);
                         break;
                     default:
                         flag = false;
