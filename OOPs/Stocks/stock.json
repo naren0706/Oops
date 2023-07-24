@@ -1,17 +1,1 @@
-[
-  {
-    "StockName": "Amazon",
-    "NoOfStock": 100,
-    "SharePrice": 40
-  },
-  {
-    "StockName": "FlipKart",
-    "NoOfStock": 80,
-    "SharePrice": 60
-  },
-  {
-    "StockName": "Ajio",
-    "NoOfStock": 100,
-    "SharePrice": 20
-  }
-]
+[{"StockName":"Amazon","NoOfShares":89,"SharePrice":40},{"StockName":"FlipKart","NoOfShares":60,"SharePrice":60},{"StockName":"Ajio","NoOfShares":90,"SharePrice":20}]
