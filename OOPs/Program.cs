@@ -70,10 +70,8 @@ namespace OOPs
                         StockOperation stockOperation = new StockOperation();
                         stockOperation.ReadInventoryJson(stockFilePath);
                         break;
+                    
                     case 4:
-                        UserStocksMain.Go();
-                        break;
-                    case 5:
                         Console.WriteLine("Enter the  amount");
                         int amount = Convert.ToInt32(Console.ReadLine());
                         string companyStockFilePath = @"E:\\BridgeGateProblems\\Oops\\OOPs\\Stocks\\stock.json";
@@ -100,7 +98,9 @@ namespace OOPs
                                 case 4:
                                     customerStockOperation.Display();
                                     break;
-                                
+                                default:
+                                    flag4 = false;              
+                                    break;                                
                             }
                         }
                         break;
