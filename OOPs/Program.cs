@@ -2,7 +2,6 @@
 using OOPs.DataInventoryManagement;
 using OOPs.InventoryManagement;
 using OOPs.Stocks;
-using OOPs.UserStocks;
 using System;
 
 namespace OOPs
