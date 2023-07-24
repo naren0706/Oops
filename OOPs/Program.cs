@@ -1,6 +1,8 @@
-﻿using OOPs.DataInventoryManagement;
+﻿using OOPs.CommercialDataProcessing;
+using OOPs.DataInventoryManagement;
 using OOPs.InventoryManagement;
 using OOPs.Stocks;
+using OOPs.UserStocks;
 using System;
 
 namespace OOPs
@@ -15,7 +17,7 @@ namespace OOPs
             bool flag = true;
             while (flag)
             {
-                Console.WriteLine("1.show inventory files\n2.inventory management operation\n3.Stocks");
+                Console.WriteLine("1.show inventory files\n2.inventory management operation\n3.Stocks\n4.UserStock");
                 int choice = Convert.ToInt32(Console.ReadLine());
                 switch (choice) {
                     case 1:
@@ -67,6 +69,40 @@ namespace OOPs
                     case 3:
                         StockOperation stockOperation = new StockOperation();
                         stockOperation.ReadInventoryJson(stockFilePath);
+                        break;
+                    case 4:
+                        UserStocksMain.Go();
+                        break;
+                    case 5:
+                        Console.WriteLine("Enter the  amount");
+                        int amount = Convert.ToInt32(Console.ReadLine());
+                        string companyStockFilePath = @"E:\\BridgeGateProblems\\Oops\\OOPs\\Stocks\\stock.json";
+                        string customerStockFilePath = @"E:\BridgeGateProblems\Oops\OOPs\CommercialDataProcessing\CustomerStock.json";
+                        CustomerStockOperation customerStockOperation = new CustomerStockOperation(amount);
+                        customerStockOperation.ReadCompanyStock(companyStockFilePath);
+                        customerStockOperation.ReadCustomerStock(customerStockFilePath);
+                        bool flag4 = true;
+                        while (flag4)
+                        {
+                            Console.WriteLine("1.buy\n2.sell\n2.write to json\n3.display");
+                            switch (Convert.ToInt32(Console.ReadLine()))
+                            {
+                                case 1:
+                                    customerStockOperation.CustomerBuyStockFromCompany();
+                                    break;
+                                case 2:
+                                    customerStockOperation.CustomerSellStockToCompany();
+                                    break;
+                                case 3:
+                                    customerStockOperation.WriteToCustomerFile(customerStockFilePath);
+                                    customerStockOperation.WriteToCompanyFile(companyStockFilePath);
+                                    break;
+                                case 4:
+                                    customerStockOperation.Display();
+                                    break;
+                                
+                            }
+                        }
                         break;
                     default:
                         flag = false;
